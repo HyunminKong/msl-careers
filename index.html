@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1748e5">
+  <meta name="description" content="Media System Lab (MSL) 박사 연구원 모집. 박사 연구 주제 자유, 중견기업급 급여, 자율출퇴근. ITC 학회 제출 경력 필수, ICCE-ASIA 경력 우대. 지원 문의: 오규태, 공현민.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="MSL Careers | 좋아하는 연구가 당신의 일이 되는 곳">
+  <meta property="og:description" content="Media System Lab 박사 연구원 모집 · 박사 연구 주제 자유 · 중견기업급 급여 · 자율출퇴근 · 지원 문의: 오규태, 공현민">
+  <title>MSL Careers | Media System Lab 박사 연구원 모집</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231748e5'/%3E%3Cpath d='M14 45V19h7l11 15 11-15h7v26h-8V32L32 45 22 32v13Z' fill='white'/%3E%3C/svg%3E">
+  <style>
+    /* 색상과 최대 너비는 아래 변수에서 한 번에 변경할 수 있습니다. */
+    :root{--blue:#1748e5;--blue-dark:#1039bd;--ink:#15191f;--muted:#626b78;--line:#e3e7ec;--paper:#f5f7fa;--navy:#101e46;--max:1200px;--header:88px;--radius:24px;--font:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",Arial,sans-serif}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:112px}
+    body{margin:0;background:#fff;color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.65;letter-spacing:-.035em;word-break:keep-all;-webkit-font-smoothing:antialiased}
+    body.locked{overflow:hidden}
+    button,input,textarea{font:inherit;letter-spacing:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    button{cursor:pointer}
+    a{color:inherit;text-decoration:none}
+    button{color:inherit}
+    svg{display:block;flex-shrink:0}
+    button,a,summary,textarea{outline-offset:5px}
+    :focus-visible{outline:3px solid #4b78ff}
+    [hidden]{display:none!important}
+    ::selection{background:#dce6ff;color:#1039bd}
+    h1,h2,h3,p{margin:0}
+    .container{width:min(var(--max),calc(100% - 80px));margin-inline:auto}
+    .icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+    .skip-link{position:fixed;left:20px;top:-100px;z-index:100;background:var(--blue);color:#fff;padding:12px 24px;border-radius:8px}
+    .skip-link:focus{top:16px}
+    .eyebrow{font-size:12px;font-weight:750;letter-spacing:.13em;line-height:1.5;color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:54px;padding:0 26px;border:1px solid transparent;border-radius:8px;font-size:15px;font-weight:750;transition:background .2s,transform .2s,border-color .2s;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--blue);color:#fff}
+    .btn-primary:hover{background:var(--blue-dark)}
+    .btn-outline{background:#fff;border-color:#d9dfe7}
+    .btn-outline:hover{border-color:var(--ink);background:#fafbfc}
+    .btn-text{padding:0;min-height:44px;border:0;border-radius:0;gap:10px;background:none}
+    .btn .icon{width:19px;height:19px}
+    .site-header{height:var(--header);position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(225,230,237,.65);backdrop-filter:blur(16px)}
+    .header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:35px}
+    .brand{display:inline-flex;align-items:center;gap:17px;flex-shrink:0}
+    .brand-word{font-family:Arial,sans-serif;font-size:35px;font-weight:900;line-height:1;letter-spacing:-2.4px;display:flex;align-items:flex-end}
+    .brand-dot{width:7px;height:7px;margin:0 0 4px 3px;background:var(--blue);border-radius:50%}
+    .brand-separator{height:20px;width:1px;background:#d7dce5}
+    .brand-caption{font:700 12px/1.3 Arial,sans-serif;letter-spacing:2px}
+    .desktop-nav{display:flex;align-items:center;gap:36px;margin-left:auto;margin-right:18px}
+    .desktop-nav a{font-size:14px;font-weight:650;position:relative;padding:12px 0}
+    .desktop-nav a::after{content:"";position:absolute;bottom:3px;left:0;width:100%;height:2px;background:var(--blue);transform:scaleX(0);transition:transform .2s}
+    .desktop-nav a:hover::after,.desktop-nav a[aria-current="location"]::after{transform:scaleX(1)}
+    .header-apply{min-height:42px;padding:0 18px;font-size:13px;gap:15px;border-radius:6px}
+    .menu-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line);background:#fff;border-radius:8px}
+    .mobile-nav{position:absolute;top:100%;left:0;width:100%;padding:12px 24px 24px;border-bottom:1px solid var(--line);background:#fff;box-shadow:0 20px 30px #1827480a}
+    .mobile-nav a{display:flex;justify-content:space-between;padding:16px 10px;font-size:17px;font-weight:650;border-bottom:1px solid #edf0f5}
+    .hero-wrap{padding:24px 24px 0}
+    .hero{max-width:1536px;margin:0 auto;background:#f1f4fa;border-radius:24px;overflow:hidden;position:relative}
+    .hero::before{content:"";position:absolute;width:700px;height:700px;right:-130px;top:-130px;background:radial-gradient(circle,#e0e9ff 0%,#eaf0fd 36%,transparent 68%);pointer-events:none}
+    .hero-inner{min-height:586px;position:relative;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:16px}
+    .hero-copy{padding:55px 0 76px;position:relative;z-index:2}
+    .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:27px;font:700 11px/1.5 Arial,sans-serif;letter-spacing:1.8px;color:#465470}
+    .status-dot{width:6px;height:6px;display:inline-block;flex-shrink:0;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px #1748e512}
+    h1{font-size:clamp(40px,4.05vw,60px);font-weight:800;letter-spacing:-.068em;line-height:1.27}
+    h1 .accent{display:block;color:var(--blue)}
+    .hero-description{margin-top:26px;color:#626b7a;font-size:16px;line-height:1.9;font-weight:450}
+    .hero-buttons{display:flex;gap:23px;align-items:center;margin-top:33px}
+    .hero-bottom{position:absolute;bottom:25px;left:0;display:flex;align-items:center;gap:10px;font:600 10px/1 Arial,sans-serif;letter-spacing:2px;color:#71809a}
+    .hero-bottom::before{content:"";width:26px;height:1px;background:#8995aa}
+    .hero-art{position:relative;min-width:0;align-self:stretch;display:flex;align-items:center;justify-content:center;margin-right:-38px}
+    .orbit-art{width:114%;max-width:none;height:auto;overflow:visible;position:relative;margin-left:-10px}
+    .art-caption{position:absolute;bottom:72px;right:24px;text-align:right;font:600 10px/1.7 Arial,sans-serif;letter-spacing:1.8px;color:#6b7e9d}
+    .art-caption strong{display:block;font-size:11px;letter-spacing:2.6px;color:#273d65}
+    .orbit-drift{animation:float 7s ease-in-out infinite;transform-origin:50% 50%}
+    .orbit-satellite{animation:float 7s ease-in-out -2.5s infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .overview{display:grid;grid-template-columns:repeat(4,1fr);padding:36px 0 37px;border-bottom:1px solid var(--line)}
+    .overview-item{padding:0 34px;border-right:1px solid var(--line)}
+    .overview-item:first-child{padding-left:0}
+    .overview-item:last-child{border-right:0}
+    .overview-label{font-size:12px;color:#667284;display:flex;align-items:center;gap:7px;margin-bottom:8px}
+    .overview-label .icon{width:14px;height:14px;stroke-width:1.6}
+    .overview-value{font-size:21px;font-weight:750;letter-spacing:-.045em;line-height:1.45}
+    .overview-value small{font-size:13px;font-weight:500;color:#667284;margin-left:7px}
+    .section{padding:100px 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:36px}
+    .section h2,.contact h2{font-size:39px;line-height:1.4;font-weight:750;letter-spacing:-.06em}
+    .section .eyebrow,.contact .eyebrow{margin-bottom:14px}
+    .section-description{font-size:14px;color:var(--muted);line-height:1.9;padding-bottom:5px;max-width:350px}
+    .opening-layout{display:grid;grid-template-columns:1fr 1.63fr;gap:70px;align-items:start}
+    .opening-intro{padding-top:4px}
+    .opening-intro p:not(.eyebrow){font-size:15px;line-height:1.95;color:var(--muted);margin-top:21px}
+    .intro-rule{width:42px;height:2px;background:var(--blue);margin-top:27px}
+    .job-card{border:1px solid #dce2ec;border-radius:18px;padding:31px 34px;background:#fff;box-shadow:0 8px 28px rgba(21,37,71,.035);position:relative}
+    .job-top{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:24px}
+    .job-badges{display:flex;gap:8px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:7px;border-radius:4px;background:#edf2ff;color:#1748d7;font-size:11px;font-weight:700;line-height:1;padding:8px 10px;letter-spacing:.01em}
+    .badge-outline{border:1px solid #e0e5ed;background:#fff;color:#687381;padding:7px 9px}
+    .badge .status-dot{width:5px;height:5px;box-shadow:none}
+    .job-actions{display:flex;gap:6px}
+    .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#fff;border:1px solid #e6eaf0;border-radius:50%;transition:background .2s,color .2s}
+    .icon-btn:hover{background:#f0f4fd;color:var(--blue)}
+    .icon-btn .icon{width:16px;height:16px}
+    .icon-btn[aria-pressed="true"]{color:var(--blue);background:#edf2ff;border-color:#c7d6ff}
+    .icon-btn[aria-pressed="true"] .icon{fill:#1748e529}
+    .job-org{font:500 12px/1.5 Arial,sans-serif;letter-spacing:.35px;color:#657183;margin-bottom:7px}
+    .job-card h3{font-size:27px;font-weight:750;letter-spacing:-.055em;line-height:1.4}
+    .job-summary{font-size:14px;color:#707a89;margin-top:11px;line-height:1.7}
+    .job-meta{display:flex;align-items:center;gap:0;margin-top:24px;flex-wrap:wrap}
+    .job-meta span{font-size:12px;color:#586373;display:flex;align-items:center;gap:7px;padding:0 14px;border-right:1px solid #dce1e9}
+    .job-meta span:first-child{padding-left:0}
+    .job-meta span:last-child{border:0;padding-right:0}
+    .job-meta .icon{width:15px;height:15px;color:#8190a5}
+    .job-foot{border-top:1px solid #e9edf3;padding-top:20px;margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .job-foot-note{font-size:12px;color:#647085}
+    .job-foot .btn{min-height:45px;font-size:13px;padding:0 20px;gap:26px;border-radius:6px}
+    .life-section{background:#f6f8fb;border-top:1px solid #f0f3f7;border-bottom:1px solid #edf0f6}
+    .benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .benefit-card{position:relative;min-height:248px;background:#fff;border:1px solid #e8edf4;border-radius:16px;padding:28px 26px;transition:transform .25s,box-shadow .25s}
+    .benefit-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #22396508}
+    .benefit-visual{width:58px;height:58px;background:#edf3ff;display:flex;align-items:center;justify-content:center;border-radius:16px;margin-bottom:26px;color:var(--blue)}
+    .benefit-visual .icon{width:29px;height:29px;stroke-width:1.55}
+    .benefit-number{position:absolute;right:24px;top:28px;font:500 11px/1.5 Arial,sans-serif;letter-spacing:1px;color:#a2aab7}
+    .benefit-card h3{font-size:19px;font-weight:750;letter-spacing:-.04em;margin-bottom:10px;line-height:1.55}
+    .benefit-card p{font-size:13px;color:#626d7e;line-height:1.85}
+    .life-footnote{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:#647184;margin-top:25px}
+    .life-footnote .icon{width:15px;height:15px}
+    .qualifications{padding-bottom:90px}
+    .qual-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .qual-card{padding:29px 30px;border:1px solid #e0e6ef;border-radius:16px;display:flex;gap:22px;align-items:flex-start}
+    .qual-card.required{border-color:#cddaff;background:#f8faff}
+    .qual-icon{width:46px;height:46px;border-radius:50%;border:1px solid #d9e3ff;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--blue);flex-shrink:0;margin-top:4px}
+    .qual-icon .icon{width:23px;height:23px}
+    .qual-label{font-size:11px;font-weight:700;color:var(--blue);letter-spacing:.02em;margin-bottom:7px}
+    .qual-card:not(.required) .qual-label{color:#747e8d}
+    .qual-card h3{font-size:22px;font-weight:750;line-height:1.5;letter-spacing:-.045em}
+    .qual-card p:not(.qual-label){font-size:13px;color:#626e81;line-height:1.85;margin-top:9px}
+    .qual-note{display:flex;align-items:center;gap:7px;font-size:12px;color:#687486;margin-top:20px}
+    .qual-note .icon{width:14px;height:14px}
+    .contact-wrap{padding:0 24px}
+    .contact{background:var(--navy);color:#fff;max-width:1536px;margin:auto;border-radius:24px;overflow:hidden;position:relative}
+    .contact::before,.contact::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(146,175,255,.09);width:570px;height:570px;left:-190px;top:30px;pointer-events:none}
+    .contact::after{width:440px;height:440px;top:95px;left:-125px}
+    .contact-inner{display:grid;grid-template-columns:1fr 1.23fr;gap:70px;padding-block:64px;position:relative;z-index:1}
+    .contact .eyebrow{color:#a3baff;letter-spacing:.14em}
+    .contact h2{font-size:35px}
+    .contact-description{font-size:13px;color:#b1bfda;line-height:1.9;margin-top:18px}
+    .contact-people{display:grid;grid-template-columns:1fr 1fr;gap:17px;align-self:center}
+    .person-card{padding:27px 25px 24px;background:rgba(255,255,255,.06);border:1px solid rgba(211,226,255,.15);border-radius:14px;position:relative;transition:background .2s}
+    .person-card:hover{background:rgba(255,255,255,.1)}
+    .person-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .person-label{font-size:11px;color:#b6c5e1}
+    .person-top .icon{width:18px;height:18px;color:#96b3f1}
+    .person-card h3{font-size:27px;font-weight:650;letter-spacing:-.04em;line-height:1.5;margin-top:9px}
+    .person-subtitle{font:400 10px/1.5 Arial,sans-serif;letter-spacing:1px;color:#a5b5d4;margin-top:3px}
+    .person-button{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0 0;margin-top:24px;border:0;border-top:1px solid #ffffff26;background:none;color:#fff;font-size:12px;font-weight:650;width:100%;text-align:left}
+    .person-button .icon{width:18px;height:18px;transition:transform .2s}
+    .person-button:hover .icon{transform:translate(3px,-3px)}
+    .contact-note{grid-column:1/-1;font-size:11px;color:#a8b8d7;line-height:1.7;margin-top:-34px;text-align:right}
+    .faq-section{padding:80px 0 86px}
+    .faq-layout{display:grid;grid-template-columns:1fr 1.63fr;gap:70px}
+    .faq-section h2{font-size:31px}
+    .faq-list{border-top:1px solid #cbd2dd}
+    .faq-item{border-bottom:1px solid var(--line)}
+    .faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:22px 2px;font-size:15px;font-weight:650}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-q{color:var(--blue);font:600 14px/1 Arial,sans-serif;align-self:flex-start;margin-top:5px}
+    .faq-plus{margin-left:auto;width:16px;height:16px;position:relative;flex-shrink:0;color:#596475}
+    .faq-plus::before,.faq-plus::after{content:"";position:absolute;background:currentColor;top:7px;left:2px;width:12px;height:1.5px;transition:transform .2s}
+    .faq-plus::after{transform:rotate(90deg)}
+    .faq-item[open] .faq-plus::after{transform:rotate(0)}
+    .faq-item[open] summary{color:var(--blue)}
+    .faq-answer{padding:0 33px 23px;color:#717b8a;font-size:13px;line-height:1.95}
+    .site-footer{border-top:1px solid var(--line);padding:35px 0 29px}
+    .footer-top{display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .footer-brand{display:flex;align-items:center;gap:16px}
+    .footer-brand .brand-word{font-size:27px;letter-spacing:-1.9px}
+    .footer-brand .brand-dot{width:5px;height:5px;margin-bottom:3px}
+    .footer-name{font:500 12px/1.5 Arial,sans-serif;color:#697383;letter-spacing:.1px}
+    .footer-links{display:flex;align-items:center;gap:24px;font-size:12px;color:#6f7a8b}
+    .footer-links button{border:0;padding:8px 0;background:transparent;color:inherit}
+    .back-top{display:flex;gap:8px;align-items:center}
+    .back-top .icon{width:14px;height:14px}
+    .footer-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-top:23px}
+    .disclaimer{font-size:10px;color:#697486;line-height:1.9;max-width:680px}
+    .copyright{font:400 10px/1.7 Arial,sans-serif;color:#6b7585;white-space:nowrap;letter-spacing:.1px}
+    .mobile-cta{display:none}
+    .toast{position:fixed;left:50%;bottom:32px;z-index:80;transform:translate(-50%,20px);background:#15223d;color:#fff;border-radius:10px;padding:13px 21px;max-width:calc(100% - 32px);width:max-content;box-shadow:0 10px 30px #0d19382b;font-size:13px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+    .toast.visible{opacity:1;transform:translate(-50%,0)}
+    .contact-dialog{border:0;border-radius:20px;padding:0;width:min(520px,calc(100% - 32px));max-height:calc(100dvh - 40px);color:var(--ink);box-shadow:0 25px 100px #0c17384d;overflow:auto}
+    .contact-dialog::backdrop{background:rgba(13,24,45,.5);backdrop-filter:blur(5px)}
+    .dialog-inner{padding:33px}
+    .dialog-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    .dialog-heading .eyebrow{font-size:10px;margin-bottom:10px}
+    .dialog-heading h2{font-size:25px;line-height:1.4;letter-spacing:-.06em}
+    .dialog-close{border:1px solid var(--line);background:white;border-radius:50%;padding:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .dialog-close .icon{width:18px;height:18px}
+    .dialog-description{font-size:13px;color:#6d7889;line-height:1.85;margin-top:14px}
+    .person-options{border:0;margin:22px 0 20px;padding:0;min-width:0}
+    .person-options legend{font-size:12px;font-weight:700;margin-bottom:10px}
+    .person-option-row{display:flex;gap:9px}
+    .person-option{flex:1;position:relative}
+    .person-option input{position:absolute;width:1px;height:1px;opacity:0}
+    .person-option span{display:flex;align-items:center;justify-content:center;gap:9px;padding:11px 12px;border:1px solid #dae1eb;border-radius:8px;color:#637084;font-size:14px;cursor:pointer;transition:background .2s,border .2s}
+    .person-option input:checked+span{background:#eef3ff;color:var(--blue);border-color:#b9cdff;font-weight:700}
+    .person-option input:focus-visible+span{outline:3px solid #4b78ff;outline-offset:3px}
+    .message-label{display:block;font-size:12px;font-weight:700;margin-bottom:9px}
+    #inquiry-message{width:100%;min-height:170px;resize:vertical;border:1px solid #dce3ed;background:#f8fafc;border-radius:9px;padding:16px;font-size:13px;line-height:1.9;color:#414c5f;word-break:normal}
+    .dialog-notice{font-size:11px;line-height:1.8;color:#657184;margin-top:11px}
+    .dialog-actions{display:flex;gap:9px;margin-top:23px}
+    .dialog-actions .btn{flex:1;font-size:13px;min-height:49px;padding:0 15px;gap:9px}
+    .dialog-feedback{min-height:22px;font-size:12px;color:var(--blue);margin-top:11px;text-align:center}
+    @media(min-width:1537px){.hero-inner{min-height:620px}h1{font-size:62px}}
+    @media(max-width:1150px){.container{width:calc(100% - 64px)}.desktop-nav{gap:23px;margin-right:0}.header-inner{gap:25px}.hero-inner{min-height:540px;grid-template-columns:1.15fr 1fr}.hero-copy{padding:55px 0 80px}h1{font-size:46px}.hero-description{font-size:14px}.hero-art{margin-right:-20px}.art-caption{bottom:65px;right:15px}.overview-item{padding-inline:25px}.overview-value{font-size:20px}.overview-value small{display:block;margin-left:0;margin-top:2px}.opening-layout,.faq-layout{gap:40px;grid-template-columns:.95fr 1.55fr}.section h2{font-size:34px}.job-card{padding:28px}.benefits-grid{gap:13px}.benefit-card{padding:25px 21px}.benefit-card h3{font-size:17px}.benefit-card p{font-size:12px}.contact-inner{gap:36px}.contact h2{font-size:31px}.person-card{padding:24px 20px}.qual-card{gap:17px;padding:27px 25px}.qual-card h3{font-size:20px}}
+    @media(max-width:900px){:root{--header:76px}.brand{gap:12px}.brand-word{font-size:31px}.brand-caption{font-size:10px;letter-spacing:1.5px}.desktop-nav{gap:18px}.desktop-nav a{font-size:12px}.header-apply{font-size:12px;gap:10px;padding-inline:13px}.header-inner{gap:20px}.hero-wrap{padding:18px 18px 0}.hero-inner{min-height:500px;gap:0;grid-template-columns:1.25fr 1fr}.hero-copy{padding:44px 0 75px}h1{font-size:39px}.hero-eyebrow{font-size:9px;letter-spacing:1.4px;margin-bottom:23px}.hero-description{font-size:13px;margin-top:22px}.hero-buttons{gap:18px;margin-top:25px}.hero-buttons .btn{font-size:12px;min-height:48px;padding:0 17px;gap:12px}.hero-buttons .btn-text{padding:0}.hero-art{margin-right:-20px}.orbit-art{width:130%;margin-left:-20px}.art-caption{font-size:8px;bottom:76px;right:5px}.art-caption strong{font-size:9px}.overview{padding-block:29px}.overview-item{padding-inline:18px}.overview-label{font-size:11px}.overview-value{font-size:18px}.section{padding:78px 0}.opening-layout{grid-template-columns:1fr;gap:28px}.opening-intro h2 br{display:none}.opening-intro p:not(.eyebrow){margin-top:13px}.intro-rule{display:none}.job-card{padding:29px 32px}.section h2{font-size:32px}.section-description{font-size:13px;max-width:300px}.benefits-grid{grid-template-columns:repeat(2,1fr);gap:16px}.benefit-card{min-height:230px;padding:27px}.benefit-card h3{font-size:20px}.benefit-card p{font-size:13px}.benefit-visual{margin-bottom:23px}.qual-card{display:block;padding:25px}.qual-icon{margin:0 0 20px}.qual-card h3{font-size:20px}.contact-wrap{padding:0 18px}.contact-inner{grid-template-columns:1fr;gap:28px;padding-block:46px}.contact h2 br{display:none}.contact h2{font-size:31px}.contact-description{margin-top:12px}.person-card{padding:25px 27px}.contact-note{text-align:left;margin-top:-13px}.faq-layout{grid-template-columns:1fr;gap:27px}.faq-section h2{font-size:30px}.footer-bottom{align-items:flex-start;flex-direction:column;gap:12px}.disclaimer{max-width:none}.footer-links{gap:18px}.site-footer{padding-top:30px}.faq-section{padding:65px 0}}
+    @media(max-width:680px){:root{--header:70px}.container{width:calc(100% - 40px)}html{scroll-padding-top:90px}.site-header{height:70px}.header-inner{gap:12px}.brand{gap:12px}.brand-word{font-size:31px}.brand-caption{font-size:10px;letter-spacing:1.6px}.brand-separator{height:17px}.desktop-nav,.header-apply{display:none}.menu-toggle{display:flex}.hero-wrap{padding:12px 12px 0}.hero{border-radius:18px}.hero-inner{min-height:0;grid-template-columns:1fr;gap:0;width:calc(100% - 44px)}.hero-copy{padding:39px 0 0}.hero-eyebrow{font-size:9px;letter-spacing:1.15px;margin-bottom:21px}h1{font-size:clamp(34px,8.7vw,52px);line-height:1.32;letter-spacing:-.065em}.hero-description{font-size:13px;line-height:1.9;margin-top:21px}.hero-buttons{margin-top:24px;gap:24px}.hero-buttons .btn{font-size:12px;min-height:48px;padding:0 19px}.hero-buttons .btn-text{padding:0;gap:7px}.hero-art{height:306px;margin:3px -8px 0;justify-content:center;overflow:visible}.orbit-art{width:100%;max-width:365px;height:100%;margin:0}.hero-bottom{bottom:19px;font-size:8px;letter-spacing:1.2px}.hero-bottom::before{width:20px}.art-caption{right:0;bottom:22px;font-size:7px;letter-spacing:1px}.art-caption strong{font-size:8px;letter-spacing:1.6px}.hero::before{width:500px;height:500px;right:-180px;top:230px}.overview{grid-template-columns:1fr 1fr;row-gap:26px;padding:30px 0}.overview-item{padding:0 20px!important;border-right:0}.overview-item:nth-child(odd){padding-left:0!important;border-right:1px solid var(--line)}.overview-label{font-size:11px;margin-bottom:5px}.overview-value{font-size:20px}.overview-value small{display:inline;font-size:11px;margin-left:6px}.section{padding:60px 0}.section .eyebrow{font-size:10px;letter-spacing:.12em;margin-bottom:12px}.section h2{font-size:29px;line-height:1.4}.opening-intro h2 br{display:block}.opening-intro p:not(.eyebrow){font-size:13px;line-height:1.9;margin-top:15px}.opening-layout{gap:25px}.job-card{padding:24px 22px;border-radius:14px}.job-top{margin-bottom:22px}.job-actions{gap:5px}.icon-btn{width:33px;height:33px}.badge{font-size:10px;padding:7px 8px}.badge-outline{padding:6px 7px}.job-badges{gap:6px}.job-org{font-size:11px}.job-card h3{font-size:24px}.job-summary{font-size:12px;margin-top:9px}.job-meta{gap:10px;margin-top:19px}.job-meta span{font-size:11px;padding:0 9px 0 0;gap:5px}.job-meta span:last-child{padding:0}.job-meta .icon{width:13px;height:13px}.job-foot{margin-top:22px;padding-top:19px}.job-foot-note{font-size:10px;max-width:130px;line-height:1.8}.job-foot .btn{padding:0 16px;gap:17px;font-size:12px;min-height:44px}.section-head{display:block;margin-bottom:25px}.section-description{font-size:12px;line-height:1.85;margin-top:15px;max-width:none;padding:0}.benefits-grid{gap:12px}.benefit-card{padding:22px 17px;min-height:230px;border-radius:13px}.benefit-visual{width:48px;height:48px;border-radius:13px;margin-bottom:22px}.benefit-visual .icon{width:25px;height:25px}.benefit-number{font-size:9px;right:16px;top:22px}.benefit-card h3{font-size:16px;margin-bottom:8px;line-height:1.55}.benefit-card p{font-size:11px;line-height:1.85}.life-footnote{font-size:10px;margin-top:19px;gap:6px}.life-footnote .icon{width:13px;height:13px}.qual-grid{grid-template-columns:1fr;gap:12px}.qual-card{display:flex;align-items:flex-start;padding:24px 20px;gap:18px;border-radius:13px}.qual-icon{width:41px;height:41px;margin:2px 0 0}.qual-icon .icon{width:21px;height:21px}.qual-label{font-size:10px;margin-bottom:5px}.qual-card h3{font-size:19px}.qual-card p:not(.qual-label){font-size:11px;margin-top:8px;line-height:1.9}.qual-note{font-size:10px;margin-top:17px;align-items:flex-start}.qual-note .icon{margin-top:3px}.contact-wrap{padding:0 12px}.contact{border-radius:18px}.contact-inner{width:calc(100% - 44px);padding-block:37px;gap:25px}.contact .eyebrow{font-size:10px;margin-bottom:13px}.contact h2{font-size:28px;line-height:1.4}.contact h2 br{display:block}.contact-description{font-size:11px;line-height:1.95;margin-top:14px}.contact-people{gap:11px}.person-card{padding:20px 16px 19px;border-radius:12px}.person-label{font-size:10px}.person-top .icon{width:15px;height:15px}.person-card h3{font-size:25px;margin-top:10px}.person-subtitle{font-size:8px;letter-spacing:.6px}.person-button{margin-top:20px;padding-top:15px;font-size:10px;gap:4px}.person-button .icon{width:16px;height:16px}.contact-note{font-size:9px;line-height:1.9;margin-top:-10px;max-width:290px}.faq-section{padding:54px 0}.faq-layout{gap:23px}.faq-section h2{font-size:27px}.faq-item summary{font-size:13px;gap:12px;padding-block:20px}.faq-q{font-size:12px}.faq-answer{font-size:12px;padding:0 26px 20px}.site-footer{padding:28px 0 105px}.footer-top{align-items:flex-start;gap:20px}.footer-brand{flex-direction:column;align-items:flex-start;gap:9px}.footer-name{font-size:10px}.footer-links{gap:15px;font-size:10px;align-items:center}.footer-links button{padding-top:2px}.footer-bottom{gap:17px;margin-top:20px}.disclaimer{font-size:9px;line-height:1.9}.copyright{font-size:9px}.mobile-cta{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:25;align-items:center;justify-content:space-between;gap:20px;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid #e0e6ef;padding:12px 20px calc(12px + env(safe-area-inset-bottom));box-shadow:0 -5px 25px #142e6807}.mobile-cta-copy{font-size:12px;font-weight:750;line-height:1.45}.mobile-cta-copy small{display:block;color:#7a8595;font-size:10px;font-weight:400;margin-top:3px}.mobile-cta .btn{min-height:43px;font-size:12px;padding:0 21px;gap:21px;border-radius:7px}.toast{bottom:92px;font-size:12px;padding:12px 16px}.dialog-inner{padding:25px 23px}.dialog-heading h2{font-size:23px}.dialog-description{font-size:12px}#inquiry-message{font-size:16px;line-height:1.7;min-height:220px}.dialog-actions .btn{font-size:12px;padding-inline:10px}}
+    @media(max-width:360px){.container{width:calc(100% - 32px)}.hero-inner,.contact-inner{width:calc(100% - 36px)}h1{font-size:31px}.hero-eyebrow{font-size:8px}.hero-description{font-size:12px}.hero-buttons{gap:16px}.hero-buttons .btn{padding-inline:15px}.hero-buttons .btn-text{padding:0}.hero-art{height:278px}.art-caption{right:-1px;font-size:6px}.art-caption strong{font-size:7px}.hero-bottom{font-size:7px;letter-spacing:.7px}.overview-item{padding-right:10px!important}.overview-value{font-size:18px}.overview-value small{font-size:10px}.job-card{padding:21px 18px}.job-card h3{font-size:22px}.job-meta{gap:7px}.job-meta span{font-size:10px}.benefit-card{padding:20px 14px}.benefit-card h3{font-size:15px}.benefit-card p{font-size:10px}.benefit-number{right:13px}.qual-card{padding:22px 17px;gap:13px}.qual-card h3{font-size:18px}.person-card{padding:19px 13px}.person-button{font-size:9px}.contact-people{gap:10px}.person-subtitle{font-size:7px}.footer-links{gap:11px}.mobile-cta{padding-inline:16px;gap:12px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.btn:hover,.benefit-card:hover{transform:none}}
+    @media print{html{scroll-padding-top:0}body{font-size:11pt;color:#000}.site-header{position:static;height:62px;border-bottom:1px solid #ccc}.container{width:100%;max-width:none}.desktop-nav,.header-apply,.menu-toggle,.hero-art,.hero-buttons,.hero-bottom,.job-actions,.job-foot .btn,.mobile-cta,.contact-dialog,.toast,.footer-links,.person-button,.faq-section{display:none!important}.hero-wrap,.contact-wrap{padding:0}.hero{background:#fff;border-radius:0}.hero::before,.contact::before,.contact::after{display:none}.hero-inner{min-height:0;display:block}.hero-copy{padding:25px 0}h1{font-size:28pt}.hero-eyebrow{margin-bottom:12px}.hero-description{margin-top:12px}.overview{padding:20px 0}.overview-value{font-size:15pt}.section{padding:28px 0;break-inside:avoid}.opening-layout{grid-template-columns:1fr 1.5fr;gap:20px}.section h2,.contact h2{font-size:20pt}.job-card{padding:20px}.section-head{margin-bottom:20px}.section-description{display:none}.life-section{background:#fff}.benefits-grid{grid-template-columns:repeat(4,1fr);gap:12px}.benefit-card{min-height:0;padding:15px;box-shadow:none}.benefit-card p{font-size:9pt}.benefit-visual{width:35px;height:35px;margin-bottom:12px}.benefit-number{display:none}.benefit-card h3{font-size:12pt}.qual-grid{gap:15px}.qual-card{padding:18px}.qual-card h3{font-size:14pt}.qual-card p:not(.qual-label){font-size:9pt}.contact{background:#fff;color:#000;border:1px solid #ccc;border-radius:12px;break-inside:avoid}.contact-inner{padding:20px;gap:20px;grid-template-columns:1fr 1fr}.contact .eyebrow,.contact-description,.contact-note{color:#555}.contact-people{gap:10px}.person-card{border-color:#ccc;padding:15px}.person-label,.person-subtitle,.person-top .icon{color:#555}.person-card h3{font-size:16pt}.contact-note{margin-top:0}.site-footer{padding:22px 0}.disclaimer,.copyright{color:#666}.site-footer .brand-word{font-size:22px}a[href]::after{content:none!important}}
+  </style>
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">본문 바로가기</a>
+  <!-- 공통 아이콘: 외부 라이브러리 없이 작동합니다. -->
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-lab" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6l-6 9a2 2 0 0 0 1.7 3h12.6A2 2 0 0 0 20 18l-6-9V3M7 14h10m-7.5 3h.01M14 18h.01"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M20 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2M3 7h15a2 2 0 0 1 2 2v1m1 0h-5a3 3 0 0 0 0 6h5v-6Z"/><path d="M16 13h.01"/></symbol>
+    <symbol id="i-door" viewBox="0 0 24 24"><path d="M3 21h18M6 21V4l11-2v19M17 5h3v16M13 12h.01"/><path d="M10 8v1"/></symbol>
+    <symbol id="i-game" viewBox="0 0 24 24"><path d="M7 7h10c2 0 3 1.5 3.5 4l1 6c.4 2-1.7 3.3-3.2 1.9L15 16H9l-3.3 2.9c-1.5 1.4-3.6.1-3.2-1.9l1-6C4 8.5 5 7 7 7Z"/><path d="M8 10v5m-2.5-2.5h5M15 11h.01M18 14h.01M12 7V4"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14a4.5 4.5 0 0 0 8 0M8 9h.01M16 9h.01"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m6 12 4 4 8-8"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.8 6.4.9-4.6 4.5 1.1 6.3-5.7-3-5.7 3 1.1-6.3L2.8 9.7l6.4-.9L12 3Z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10h.01"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3m-4 4 4-4 4 4M6 10H4v11h16V10h-2"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path class="bookmark-shape" d="M6 3h12v18l-6-4-6 4V3Z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H4v13h4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="MSL Careers 홈">
+        <span class="brand-word">MSL<span class="brand-dot"></span></span><span class="brand-separator" aria-hidden="true"></span><span class="brand-caption">CAREERS</span>
+      </a>
+      <nav class="desktop-nav" aria-label="주 메뉴">
+        <a href="#about">MSL 소개</a><a href="#recruit">채용 공고</a><a href="#life">MSL 라이프</a><a href="#apply">지원 안내</a>
+      </nav>
+      <a href="#apply" class="btn btn-primary header-apply">지원 문의 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="모바일 메뉴" hidden>
+      <a href="#about">MSL 소개 <span aria-hidden="true">01</span></a><a href="#recruit">채용 공고 <span aria-hidden="true">02</span></a><a href="#life">MSL 라이프 <span aria-hidden="true">03</span></a><a href="#apply">지원 안내 <span aria-hidden="true">04</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="hero-wrap" id="about">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="hero-eyebrow"><span class="status-dot" aria-hidden="true"></span> MEDIA SYSTEM LAB · RESEARCH CAREERS</p>
+            <h1 id="hero-title">좋아하는 연구가<span class="accent">당신의 일이 되는 곳.</span></h1>
+            <p class="hero-description">연구의 방향은 자유롭게, 몰입의 방식은 나답게.<br>Media System Lab에서 다음 가능성을 함께 발견하세요.</p>
+            <div class="hero-buttons">
+              <a href="#recruit" class="btn btn-primary">채용 공고 보기 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a href="#life" class="btn btn-text">MSL의 일상 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <!-- 독립 제작 벡터 일러스트레이션. 이미지 파일이나 API가 필요하지 않습니다. -->
+            <svg class="orbit-art" viewBox="0 0 600 530" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="orbital-body" x1="171" y1="132" x2="393" y2="391" gradientUnits="userSpaceOnUse"><stop stop-color="#9dbaff"/><stop offset=".24" stop-color="#4577f3"/><stop offset=".59" stop-color="#1748e5"/><stop offset="1" stop-color="#092785"/></linearGradient>
+                <linearGradient id="orbital-inner" x1="200" y1="177" x2="400" y2="342" gradientUnits="userSpaceOnUse"><stop stop-color="#0d318f"/><stop offset=".46" stop-color="#163cb8"/><stop offset="1" stop-color="#b8d0ff"/></linearGradient>
+                <linearGradient id="orbital-face" x1="160" y1="140" x2="401" y2="352" gradientUnits="userSpaceOnUse"><stop stop-color="#a3c2ff"/><stop offset=".23" stop-color="#6d9bff"/><stop offset=".47" stop-color="#2f69f4"/><stop offset=".78" stop-color="#1f50dc"/><stop offset="1" stop-color="#1236a5"/></linearGradient>
+                <linearGradient id="glass-ring" x1="142" y1="149" x2="460" y2="376" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity=".9"/><stop offset=".44" stop-color="#b1c7ed" stop-opacity=".08"/><stop offset=".73" stop-color="#93b8ff" stop-opacity=".6"/><stop offset="1" stop-color="white" stop-opacity=".9"/></linearGradient>
+                <linearGradient id="glass-border" x1="411" y1="201" x2="194" y2="309" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset=".45" stop-color="#b6c9f0" stop-opacity=".4"/><stop offset="1" stop-color="#6e96e4" stop-opacity=".6"/></linearGradient>
+                <radialGradient id="small-sphere" cx=".28" cy=".2" r=".9"><stop stop-color="#a2c2ff"/><stop offset=".42" stop-color="#3972f1"/><stop offset="1" stop-color="#153895"/></radialGradient>
+                <radialGradient id="pale-sphere" cx=".25" cy=".2" r=".85"><stop stop-color="#fff"/><stop offset=".4" stop-color="#e4edff"/><stop offset="1" stop-color="#adc2ef"/></radialGradient>
+                <radialGradient id="floor-shadow"><stop stop-color="#4e69a4" stop-opacity=".2"/><stop offset="1" stop-color="#4e69a4" stop-opacity="0"/></radialGradient>
+                <pattern id="dots" width="23" height="23" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".85" fill="#7b9ac9" opacity=".2"/></pattern>
+                <filter id="sculpture-shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="3" dy="17" stdDeviation="12" flood-color="#1c3984" flood-opacity=".13"/></filter>
+                <filter id="label-shadow" x="-30%" y="-60%" width="160%" height="220%"><feDropShadow dy="9" stdDeviation="12" flood-color="#345088" flood-opacity=".08"/></filter>
+              </defs>
+              <rect x="60" y="74" width="460" height="390" fill="url(#dots)"/>
+              <circle cx="306" cy="257" r="193" stroke="#ccd9ee" stroke-width=".8" opacity=".72"/>
+              <circle cx="306" cy="257" r="227" stroke="#d5dff0" stroke-width=".8" stroke-dasharray="3 7" opacity=".8"/>
+              <path d="M76 257H536M306 28V489" stroke="#c2d0e8" stroke-width=".7" stroke-dasharray="3 7" opacity=".58"/>
+              <ellipse cx="319" cy="444" rx="173" ry="30" fill="url(#floor-shadow)"/>
+              <ellipse cx="306" cy="257" rx="263" ry="111" transform="rotate(-23 306 257)" stroke="#a6bce1" stroke-width="1"/>
+              <g class="orbit-drift" filter="url(#sculpture-shadow)">
+                <g transform="rotate(-31 306 257)">
+                  <ellipse cx="309" cy="266" rx="125" ry="151" stroke="url(#orbital-body)" stroke-width="62"/>
+                  <ellipse cx="302" cy="250" rx="106" ry="144" stroke="url(#orbital-inner)" stroke-width="23"/>
+                  <ellipse cx="301" cy="245" rx="123" ry="146" stroke="url(#orbital-face)" stroke-width="44"/>
+                  <path d="M180 243c0-80 54-145 121-145 27 0 51 9 72 27" stroke="#cce0ff" stroke-opacity=".74" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M237 366c18 16 40 25 64 25 62 0 114-55 122-127" stroke="#133bba" stroke-opacity=".42" stroke-width="1.6" stroke-linecap="round"/>
+                </g>
+                <g transform="rotate(42 306 267)">
+                  <ellipse cx="306" cy="267" rx="202" ry="77" stroke="url(#glass-ring)" stroke-width="33"/>
+                  <ellipse cx="306" cy="267" rx="218" ry="93" stroke="url(#glass-border)" stroke-width="1.2"/>
+                  <ellipse cx="306" cy="267" rx="186" ry="61" stroke="white" stroke-opacity=".8" stroke-width="1"/>
+                </g>
+              </g>
+              <g class="orbit-satellite">
+                <circle cx="503" cy="153" r="18" fill="url(#small-sphere)"/>
+                <circle cx="114" cy="374" r="11" fill="url(#small-sphere)"/>
+                <circle cx="155" cy="119" r="13" fill="url(#pale-sphere)"/>
+              </g>
+              <g filter="url(#label-shadow)">
+                <rect x="344" y="337" width="171" height="65" rx="12" fill="white" fill-opacity=".92"/>
+                <rect x="344.5" y="337.5" width="170" height="64" rx="11.5" stroke="white"/>
+                <rect x="357" y="351" width="38" height="38" rx="10" fill="#edf3ff"/>
+                <path d="M367 370c0-7 6-7 9 0s9 7 9 0-6-7-9 0-9 7-9 0Z" stroke="#1748e5" stroke-width="2"/>
+                <text x="407" y="365" fill="#72809b" font-family="Arial,sans-serif" font-size="8.5" letter-spacing="1.3">YOUR POTENTIAL</text>
+                <text x="407" y="383" fill="#1e335a" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="-.2">Unlimited.</text>
+              </g>
+              <g transform="translate(75 210)"><rect width="91" height="28" rx="14" fill="white" fill-opacity=".88"/><circle cx="13" cy="14" r="3" fill="#1748e5"/><text x="24" y="17.5" font-family="Arial,sans-serif" font-size="8" font-weight="600" letter-spacing="1.2" fill="#44628f">RESEARCH</text></g>
+              <path d="M461 425h10m-5-5v10M96 164h10m-5-5v10" stroke="#8fa9d3" stroke-width="1"/>
+            </svg>
+            <p class="art-caption">A SPACE FOR YOUR IDEAS.<strong>RESEARCH, WITHOUT LIMITS.</strong></p>
+          </div>
+          <p class="hero-bottom">YOUR NEXT CHAPTER STARTS HERE</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="container overview" aria-label="모집 요약">
+      <div class="overview-item"><p class="overview-label"><svg class="icon" aria-hidden="true"><use href="#i-lab"/></svg>모집 부문</p><p class="overview-value">Ph.D. Researcher<small>박사 연구원</small></p></div>
+      <div class="overview-item"><p class="overview-label"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg>박사 연구 주제</p><p class="overview-value">자유 주제</p></div>
+      <div class="overview-item"><p class="overview-label"><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg>급여 수준</p><p class="overview-value">중견기업급</p></div>
+      <div class="overview-item"><p class="overview-label"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>근무 방식</p><p class="overview-value">자율출퇴근</p></div>
+    </div>
+
+    <section class="section container" id="recruit" aria-labelledby="recruit-title">
+      <div class="opening-layout">
+        <div class="opening-intro">
+          <p class="eyebrow">OPEN POSITION</p>
+          <h2 id="recruit-title">하고 싶은 연구,<br>여기서 시작하세요.</h2>
+          <p>정해진 주제보다 당신의 호기심을 존중합니다.<br>스스로 질문하고, 함께 답을 찾아갈<br>새로운 동료를 기다립니다.</p>
+          <div class="intro-rule" aria-hidden="true"></div>
+        </div>
+        <article class="job-card" aria-labelledby="job-title">
+          <div class="job-top">
+            <div class="job-badges"><span class="badge"><span class="status-dot" aria-hidden="true"></span>연구원 모집</span><span class="badge badge-outline">RESEARCH</span></div>
+            <div class="job-actions">
+              <button type="button" id="save-job" class="icon-btn" aria-label="관심 공고 저장" aria-pressed="false" title="관심 공고 저장"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg></button>
+              <button type="button" id="share-job" class="icon-btn" aria-label="채용 공고 공유" title="채용 공고 공유"><svg class="icon" aria-hidden="true"><use href="#i-share"/></svg></button>
+            </div>
+          </div>
+          <p class="job-org">Media System Lab</p>
+          <h3 id="job-title">MSL 박사 연구원 모집</h3>
+          <p class="job-summary">박사 연구 주제는 자유롭게. 당신의 관심이 연구의 시작입니다.</p>
+          <div class="job-meta"><span><svg class="icon" aria-hidden="true"><use href="#i-lab"/></svg>자유 주제 연구</span><span><svg class="icon" aria-hidden="true"><use href="#i-wallet"/></svg>중견기업급 급여</span><span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>자율출퇴근</span></div>
+          <div class="job-foot"><p class="job-foot-note">지원 일정 및 세부 조건은 담당자 문의</p><a href="#qualifications" class="btn btn-primary">지원 자격 보기 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section life-section" id="life" aria-labelledby="life-title">
+      <div class="container">
+        <div class="section-head"><div><p class="eyebrow">LIFE AT MSL</p><h2 id="life-title">연구는 진지하게.<br>일상은 즐겁게.</h2></div><p class="section-description">함께 몰입하고, 함께 쉬어가는 일상.<br>좋은 연구를 위한 MSL의 네 가지 약속입니다.</p></div>
+        <div class="benefits-grid">
+          <article class="benefit-card"><span class="benefit-number" aria-hidden="true">01</span><div class="benefit-visual"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></div><h3>자율출퇴근</h3><p>출근 시간보다 중요한 건 몰입.<br>나에게 맞는 리듬으로 연구하세요.</p></article>
+          <article class="benefit-card"><span class="benefit-number" aria-hidden="true">02</span><div class="benefit-visual"><svg class="icon" aria-hidden="true"><use href="#i-door"/></svg></div><h3>방탈출</h3><p>연구실 밖에서도 빛나는 문제 해결력.<br>함께 추리하고, 함께 탈출합니다.</p></article>
+          <article class="benefit-card"><span class="benefit-number" aria-hidden="true">03</span><div class="benefit-visual"><svg class="icon" aria-hidden="true"><use href="#i-game"/></svg></div><h3>스팀 협동 게임</h3><p>연구도 게임도, 함께하면 더 즐겁게.<br>팀워크는 협동 플레이에서부터.</p></article>
+          <article class="benefit-card"><span class="benefit-number" aria-hidden="true">04</span><div class="benefit-visual"><svg class="icon" aria-hidden="true"><use href="#i-smile"/></svg></div><h3>업무 스트레스 없음</h3><p>눈치 대신 배려, 부담 대신 응원.<br>마음 편히 연구에 집중하세요.</p></article>
+        </div>
+        <p class="life-footnote"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg>몰입할 때는 연구 동료, 쉬어갈 때는 든든한 팀원.</p>
+      </div>
+    </section>
+
+    <section class="section container qualifications" id="qualifications" aria-labelledby="qualification-title">
+      <div class="section-head"><div><p class="eyebrow">WHO WE'RE LOOKING FOR</p><h2 id="qualification-title">이런 동료를 기다립니다.</h2></div><p class="section-description">당신이 쌓아온 경험 위에,<br>새로운 연구의 가능성을 더해보세요.</p></div>
+      <div class="qual-grid">
+        <article class="qual-card required"><div class="qual-icon"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></div><div><p class="qual-label">필수 역량 · REQUIRED</p><h3>ITC 학회 제출 경력</h3><p>ITC 학회에 논문을 제출한 경험이 있으신 분.<br>연구를 정리하고 공유해 본 경험을 기다립니다.</p></div></article>
+        <article class="qual-card"><div class="qual-icon"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></div><div><p class="qual-label">우대 사항 · PREFERRED</p><h3>ICCE-ASIA 경력</h3><p>ICCE-ASIA 관련 경력이 있으신 분을 우대합니다.<br>지원 문의 시 해당 경험을 함께 알려주세요.</p></div></article>
+      </div>
+      <p class="qual-note"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg>경력 인정 범위와 자세한 지원 조건은 담당자에게 확인해 주세요.</p>
+    </section>
+
+    <div class="contact-wrap" id="apply">
+      <section class="contact" aria-labelledby="contact-title">
+        <div class="container contact-inner">
+          <div><p class="eyebrow">LET'S TALK</p><h2 id="contact-title">다음 연구의 시작,<br>이야기부터 나눠요.</h2><p class="contact-description">MSL과 함께하고 싶다면, 두 담당자에게 편하게 문의해 주세요.<br>관심 있는 박사 연구 주제와 학회 경험을 함께 알려주시면 좋습니다.</p></div>
+          <div class="contact-people">
+            <article class="person-card"><div class="person-top"><p class="person-label">지원 문의</p><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></div><h3>오규태</h3><p class="person-subtitle">MSL · RESEARCH CONTACT</p><button type="button" class="person-button" data-contact="오규태" aria-label="오규태 담당자 문의 안내">문의 안내 보기 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></button></article>
+            <article class="person-card"><div class="person-top"><p class="person-label">지원 문의</p><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg></div><h3>공현민</h3><p class="person-subtitle">MSL · RESEARCH CONTACT</p><button type="button" class="person-button" data-contact="공현민" aria-label="공현민 담당자 문의 안내">문의 안내 보기 <svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></button></article>
+          </div>
+          <p class="contact-note">온라인 지원서 접수 없이, 담당자에게 직접 문의하는 방식입니다.</p>
+        </div>
+      </section>
+    </div>
+
+    <section class="section container faq-section" aria-labelledby="faq-title">
+      <div class="faq-layout"><div><p class="eyebrow">A LITTLE MORE ABOUT MSL</p><h2 id="faq-title">궁금한 점이 있나요?</h2></div><div class="faq-list">
+        <details class="faq-item"><summary><span class="faq-q" aria-hidden="true">Q.</span>박사 연구 주제가 정해져 있나요?<span class="faq-plus" aria-hidden="true"></span></summary><p class="faq-answer">아니요. 박사 연구 주제는 자유입니다. 평소 관심 있던 질문이나 도전하고 싶은 연구 방향을 담당자에게 공유해 주세요.</p></details>
+        <details class="faq-item"><summary><span class="faq-q" aria-hidden="true">Q.</span>어떤 학회 경력이 필요한가요?<span class="faq-plus" aria-hidden="true"></span></summary><p class="faq-answer">ITC 학회 제출 경력이 필수이며, ICCE-ASIA 경력이 있으면 우대합니다. 각 경력의 구체적인 인정 범위는 담당자에게 문의해 주세요.</p></details>
+        <details class="faq-item"><summary><span class="faq-q" aria-hidden="true">Q.</span>지원은 어떻게 하나요?<span class="faq-plus" aria-hidden="true"></span></summary><p class="faq-answer">오규태 또는 공현민에게 직접 문의해 주세요. 위의 ‘문의 안내 보기’에서 문의 문구를 복사해 활용할 수 있습니다. 이 페이지는 지원서나 지원자의 개인정보를 접수하지 않습니다.</p></details>
+      </div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container">
+    <div class="footer-top"><div class="footer-brand"><a href="#top" class="brand-word" aria-label="MSL 홈">MSL<span class="brand-dot"></span></a><span class="footer-name">Media System Lab</span></div><div class="footer-links"><button type="button" id="print-job">공고 인쇄</button><a href="#apply">지원 문의</a><a href="#top" class="back-top">TOP <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a></div></div>
+    <div class="footer-bottom"><p class="disclaimer">본 페이지는 MSL 채용 홍보용 콘셉트 페이지이며, 삼성 및 삼성 계열사와 무관합니다.<br>기재된 급여·복지는 소개용 문구입니다. 실제 모집 여부 및 세부 조건은 담당자에게 확인해 주세요.</p><p class="copyright">© <span id="year">2026</span> Media System Lab. All rights reserved.</p></div>
+  </div></footer>
+
+  <div class="mobile-cta"><p class="mobile-cta-copy">MSL Ph.D. Researcher<small>당신의 다음 연구를 함께.</small></p><a href="#apply" class="btn btn-primary">지원 문의 <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <dialog id="contact-dialog" class="contact-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <div class="dialog-inner">
+      <div class="dialog-heading"><div><p class="eyebrow">CONNECT WITH MSL</p><h2 id="dialog-title">첫 인사를 준비해 볼까요?</h2></div><button type="button" class="dialog-close" id="close-dialog" aria-label="문의 안내 닫기"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+      <p class="dialog-description" id="dialog-description">오규태 또는 공현민에게 직접 문의해 주세요.<br>아래 문구를 수정하고 복사해 첫 메시지로 활용할 수 있습니다.</p>
+      <fieldset class="person-options"><legend>문의 담당자</legend><div class="person-option-row"><label class="person-option"><input type="radio" name="contact-person" value="오규태" checked><span>오규태</span></label><label class="person-option"><input type="radio" name="contact-person" value="공현민"><span>공현민</span></label></div></fieldset>
+      <label for="inquiry-message" class="message-label">문의 문구 <span style="font-weight:400;color:#7a8595">· 자유롭게 수정하세요</span></label>
+      <textarea id="inquiry-message" spellcheck="false"></textarea>
+      <p class="dialog-notice">복사한 문구는 알고 계신 담당자 연락처로 직접 보내 주세요.<br>이 페이지에서는 메시지가 전송되거나 입력 내용이 서버에 저장되지 않습니다.</p>
+      <div class="dialog-actions"><button type="button" class="btn btn-primary" id="copy-inquiry"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>문의 문구 복사</button><a class="btn btn-outline" id="email-inquiry" href="#" hidden><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>이메일로 보내기</a></div>
+      <p id="dialog-feedback" class="dialog-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+  </dialog>
+
+  <script>
+    'use strict';
+    /* 선택 설정: 실제 이메일을 전달받은 경우 아래 빈 문자열에 입력하세요.
+       예: '오규태': '실제이메일주소'
+       주소가 없을 때는 이메일 전송 버튼을 표시하지 않습니다. */
+    const CONTACT_EMAILS = { '오규태': '', '공현민': '' };
+    const STORAGE_KEY = 'msl-careers-saved-research';
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+    const toast = $('#toast');
+    let toastTimer;
+    function notify(message) {
+      clearTimeout(toastTimer);
+      toast.textContent = message;
+      toast.classList.add('visible');
+      toastTimer = setTimeout(() => toast.classList.remove('visible'), 3200);
+    }
+    // HTTPS에서는 Clipboard API를, 로컬 파일 등에서는 선택-복사 방식을 시도합니다.
+    async function copyText(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      } catch (_) { /* 브라우저 권한이 없으면 아래 호환 경로를 사용합니다. */ }
+      const active = document.activeElement;
+      const helper = document.createElement('textarea');
+      helper.value = text;
+      helper.setAttribute('readonly', '');
+      helper.style.cssText = 'position:fixed;left:0;top:0;opacity:0;pointer-events:none;font-size:16px;';
+      const openDialog = $('dialog[open]');
+      (openDialog || document.body).appendChild(helper);
+      helper.focus({ preventScroll: true });
+      helper.select();
+      helper.setSelectionRange(0, helper.value.length);
+      let copied = false;
+      try { copied = document.execCommand('copy'); } catch (_) { copied = false; }
+      helper.remove();
+      if (active && typeof active.focus === 'function') active.focus({ preventScroll: true });
+      return copied;
+    }
+
+    // 모바일 메뉴: 링크 선택, 바깥 클릭, Escape로 닫힙니다.
+    const menuButton = $('.menu-toggle');
+    const mobileNav = $('#mobile-nav');
+    function setMenu(open) {
+      mobileNav.hidden = !open;
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+      $('use', menuButton).setAttribute('href', open ? '#i-close' : '#i-menu');
+    }
+    menuButton.addEventListener('click', () => setMenu(mobileNav.hidden));
+    $$('a', mobileNav).forEach(link => link.addEventListener('click', () => {
+      setMenu(false);
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        target.setAttribute('tabindex', '-1');
+        target.focus({ preventScroll: true });
+        target.addEventListener('blur', () => target.removeAttribute('tabindex'), { once: true });
+      }
+    }));
+    document.addEventListener('click', event => {
+      if (!mobileNav.hidden && !event.target.closest('.site-header')) setMenu(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !mobileNav.hidden) {
+        setMenu(false);
+        menuButton.focus();
+      }
+    });
+    window.matchMedia('(min-width: 681px)').addEventListener('change', event => {
+      if (event.matches) setMenu(false);
+    });
+
+    // 관심 공고: 브라우저에 공고 저장 여부만 보관하며 개인정보는 수집하지 않습니다.
+    const saveButton = $('#save-job');
+    let saved = false;
+    try { saved = localStorage.getItem(STORAGE_KEY) === 'true'; } catch (_) { /* 사생활 보호 모드 지원 */ }
+    function renderSaved() {
+      saveButton.setAttribute('aria-pressed', String(saved));
+      const label = saved ? '관심 공고 저장 해제' : '관심 공고 저장';
+      saveButton.setAttribute('aria-label', label);
+      saveButton.title = label;
+    }
+    renderSaved();
+    saveButton.addEventListener('click', () => {
+      saved = !saved;
+      let persisted = true;
+      try { localStorage.setItem(STORAGE_KEY, String(saved)); } catch (_) { persisted = false; }
+      renderSaved();
+      notify(saved ? (persisted ? '이 브라우저의 관심 공고에 저장했어요.' : '현재 화면에서 관심 공고로 표시했어요. 브라우저 저장은 제한되어 있습니다.') : '관심 공고 저장을 해제했어요.');
+    });
+
+    $('#share-job').addEventListener('click', async () => {
+      if (!/^https?:$/.test(window.location.protocol)) {
+        notify('GitHub Pages에 게시한 후 공고 링크를 공유해 주세요.');
+        return;
+      }
+      const url = new URL(window.location.href);
+      url.hash = 'recruit';
+      const shareData = { title: 'MSL 박사 연구원 모집', text: '박사 연구 주제 자유 · 중견기업급 급여 · 자율출퇴근', url: url.href };
+      if (navigator.share) {
+        try { await navigator.share(shareData); return; }
+        catch (error) { if (error.name === 'AbortError') return; }
+      }
+      const copied = await copyText(url.href);
+      notify(copied ? '공고 링크를 복사했어요.' : '자동 복사가 제한되어 있어요. 주소창의 링크를 복사해 주세요.');
+    });
+
+    // 문의 안내: 실제 접수 폼이 아니며, 어떤 서버로도 입력을 전송하지 않습니다.
+    const dialog = $('#contact-dialog');
+    const inquiry = $('#inquiry-message');
+    const feedback = $('#dialog-feedback');
+    const emailLink = $('#email-inquiry');
+    let dialogOpener = null;
+    let selectedPerson = '오규태';
+    let inquiryDraft = '';
+    let dialogPointerStartedOnBackdrop = false;
+    function templateFor(person) {
+      return `안녕하세요, ${person}님.\nMSL 박사 연구원 지원 관련하여 문의드립니다.\n\n관심 박사 연구 주제: \nITC 학회 제출 경험: \nICCE-ASIA 관련 경험 (해당 시): \n\n지원 절차와 세부 조건을 안내받고 싶습니다.\n감사합니다.`;
+    }
+    function updateMailLink() {
+      const email = (CONTACT_EMAILS[selectedPerson] || '').trim();
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      emailLink.hidden = !valid;
+      if (valid) emailLink.href = `mailto:${email}?subject=${encodeURIComponent('[MSL 박사 연구원] 지원 문의')}&body=${encodeURIComponent(inquiry.value)}`;
+      else emailLink.removeAttribute('href');
+    }
+    function choosePerson(person, preserveDraft = false) {
+      const previous = selectedPerson;
+      selectedPerson = person;
+      $$('input[name="contact-person"]').forEach(input => { input.checked = input.value === person; });
+      if (preserveDraft && inquiry.value) inquiry.value = inquiry.value.replace(`안녕하세요, ${previous}님.`, `안녕하세요, ${person}님.`);
+      else inquiry.value = templateFor(person);
+      feedback.textContent = '';
+      updateMailLink();
+    }
+    $$('[data-contact]').forEach(button => button.addEventListener('click', () => {
+      setMenu(false);
+      dialogOpener = button;
+      if (inquiryDraft) inquiry.value = inquiryDraft;
+      choosePerson(button.dataset.contact, Boolean(inquiryDraft));
+      if (typeof dialog.showModal !== 'function') {
+        notify('담당자 ' + button.dataset.contact + '님에게 직접 문의해 주세요.');
+        return;
+      }
+      dialog.showModal();
+      document.body.classList.add('locked');
+      $('#close-dialog').focus();
+    }));
+    $$('input[name="contact-person"]').forEach(input => input.addEventListener('change', () => choosePerson(input.value, true)));
+    inquiry.addEventListener('input', () => { feedback.textContent = ''; updateMailLink(); });
+    $('#close-dialog').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('pointerdown', event => { dialogPointerStartedOnBackdrop = event.target === dialog; });
+    dialog.addEventListener('click', event => {
+      if (event.target === dialog && dialogPointerStartedOnBackdrop) {
+        const rect = dialog.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+      }
+    });
+    dialog.addEventListener('close', () => {
+      inquiryDraft = inquiry.value;
+      document.body.classList.remove('locked');
+      if (dialogOpener) dialogOpener.focus({ preventScroll: true });
+    });
+    $('#copy-inquiry').addEventListener('click', async () => {
+      if (!inquiry.value.trim()) { feedback.textContent = '먼저 문의 내용을 입력해 주세요.'; inquiry.focus(); return; }
+      const copied = await copyText(inquiry.value);
+      feedback.textContent = copied ? '복사했어요. 담당자에게 직접 보내 주세요.' : '자동 복사가 제한되어 있어요. 문구를 선택해 직접 복사해 주세요.';
+      if (!copied) { inquiry.focus(); inquiry.select(); }
+    });
+    $('#print-job').addEventListener('click', () => window.print());
+    $('#year').textContent = String(new Date().getFullYear());
+
+    // 현재 읽고 있는 구간을 상단 메뉴에 표시합니다.
+    const sectionLinks = $$('.desktop-nav a');
+    if ('IntersectionObserver' in window) {
+      const visibleSections = new Set();
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => entry.isIntersecting ? visibleSections.add(entry.target.id) : visibleSections.delete(entry.target.id));
+        const activeId = Array.from(visibleSections).sort((a, b) => Math.abs(document.getElementById(a).getBoundingClientRect().top - 120) - Math.abs(document.getElementById(b).getBoundingClientRect().top - 120))[0];
+        sectionLinks.forEach(link => {
+          if (link.hash === '#' + activeId) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        });
+      }, { rootMargin: '-88px 0px -45% 0px', threshold: 0 });
+      ['about', 'recruit', 'life', 'apply'].forEach(id => observer.observe(document.getElementById(id)));
+    }
+  </script>
+</body>
+</html>
